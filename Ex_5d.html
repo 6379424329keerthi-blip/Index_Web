@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Currency Converter - URK24CS1135</title>
+</head>
+
+<body>
+    <h2>Currency Converter - URK24CS1135</h2>
+
+    <input type="text" id="data">
+    <select id="from">
+        <option>Indian Rupee</option>
+        <option>US Dollar</option>
+    </select>
+    to
+    <select id="to">
+        <option>US Dollar</option>
+        <option>Indian Rupee</option>
+    </select>
+
+    <button onclick="convert()">Calculate</button>
+    <p>
+        Answer:
+        <span id="answer"></span>
+    </p>
+
+    <script>
+        function convert() {
+
+            let value = parseFloat(document.getElementById("data").value);
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result;
+
+            if (from === "Indian Rupee" && to === "US Dollar") {
+                result = value * 0.013;
+            }
+            else if (from === "US Dollar" && to === "Indian Rupee") {
+                result = value * 96.12;
+            }
+            else {
+                result = value;
+            }
+            document.getElementById("answer").innerHTML =
+                result.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>
+

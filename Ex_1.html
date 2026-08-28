@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Programming Experiments</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #0056b3;
+        }
+
+        /* For mobile */
+        @media (max-width: 700px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 450px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Web Programming Experiments</h1>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Ex 1a</h3>
+            <a href="./Ex_1a.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1b</h3>
+            <a href="./Ex_1b.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1c</h3>
+            <a href="./Ex_1c.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1d</h3>
+            <a href="./Ex_1d.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1e</h3>
+            <a href="./Ex_1e.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1f</h3>
+            <a href="./Ex_1f.html">Open</a>
+        </div>
+
+        <div class="card">
+            <h3>Ex 1g</h3>
+            <a href="./Ex_1g-scenario.html">Open</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

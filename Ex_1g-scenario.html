@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infosys Employee Training Portal</title>
+<style>
+  :root{
+    --infy-blue:#0b3d91;
+    --infy-blue-dark:#062a68;
+    --infy-green:#2e8b3d;
+    --infy-green-dark:#256e31;
+    --text-dark:#1a1a1a;
+    --text-muted:#4a4a4a;
+    --border-color:#e2e5ea;
+    --bg-page:#eef1f5;
+    --bg-card:#ffffff;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+    background:var(--bg-page);
+    color:var(--text-dark);
+    line-height:1.5;
+  }
+
+  .page{
+    max-width:900px;
+    margin:0 auto;
+    background:var(--bg-page);
+  }
+
+  /* Header */
+  .header{
+    background:var(--infy-blue);
+    padding:28px 32px;
+    display:flex;
+    align-items:center;
+    gap:24px;
+  }
+
+  .logo-box{
+    background:#fff;
+    border-radius:6px;
+    padding:14px 22px;
+    flex-shrink:0;
+  }
+
+  .logo-box svg{ display:block; height:34px; }
+
+  .header-text h1{
+    color:#fff;
+    font-size:1.9rem;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+
+  .header-text p{
+    color:#dce6f7;
+    font-size:1rem;
+  }
+
+  /* Cards */
+  .card{
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:10px;
+    margin:20px;
+    padding:28px 32px;
+  }
+
+  .card h2{
+    color:var(--infy-blue);
+    font-size:1.4rem;
+    margin-bottom:14px;
+  }
+
+  .card > p{
+    color:var(--text-muted);
+    font-size:0.98rem;
+    margin-bottom:18px;
+  }
+
+  .hero-image{
+    width:100%;
+    border-radius:8px;
+    overflow:hidden;
+    border:1px solid var(--border-color);
+  }
+
+  .hero-image img{
+    width:100%;
+    display:block;
+  }
+
+  /* Course list */
+  .course-list{
+    list-style:none;
+  }
+
+  .course-list li{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:12px 0;
+    font-size:1rem;
+    color:var(--text-dark);
+  }
+
+  .course-list li .icon{
+    width:34px;
+    height:34px;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf1fb;
+    color:var(--infy-blue);
+    font-size:1.1rem;
+    flex-shrink:0;
+  }
+
+  /* Explore section */
+  .explore{
+    text-align:center;
+  }
+
+  .explore h2{
+    text-align:center;
+  }
+
+  .explore p{
+    text-align:center;
+    color:var(--text-muted);
+    margin-bottom:22px;
+  }
+
+  .btn-row{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 26px;
+    border-radius:6px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    font-size:0.98rem;
+    border:none;
+    cursor:pointer;
+  }
+
+  .btn-blue{ background:var(--infy-blue); }
+  .btn-blue:hover{ background:var(--infy-blue-dark); }
+
+  .btn-green{ background:var(--infy-green); }
+  .btn-green:hover{ background:var(--infy-green-dark); }
+
+  /* Footer */
+  .footer{
+    background:#12161c;
+    color:#c7cdd6;
+    text-align:center;
+    padding:20px;
+    font-size:0.88rem;
+    margin-top:20px;
+    border-radius:0 0 10px 10px;
+  }
+
+  @media (max-width:600px){
+    .header{ flex-direction:column; text-align:center; }
+    .card{ margin:14px; padding:20px; }
+    .btn-row{ flex-direction:column; align-items:center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-box">
+      <svg viewBox="0 0 140 34" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="26" font-family="Arial, sans-serif" font-size="26" font-weight="600" fill="#0b3d91">Infosys</text>
+        <text x="128" y="12" font-family="Arial, sans-serif" font-size="10" fill="#0b3d91">®</text>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>Infosys Employee Training Portal</h1>
+      <p>Learn, improve and build skills for the digital future.</p>
+    </div>
+  </header>
+
+  <!-- Digital Skills Development Program -->
+  <section class="card">
+    <h2>Digital Skills Development Program</h2>
+    <p>Infosys provides technical training programs to help employees develop skills in artificial intelligence, cloud computing, cybersecurity, data science and software development.</p>
+    <div class="hero-image">
+      <img src="./Infosys board.png" alt="Training session in progress">
+    </div>
+  </section>
+
+  <!-- Available Training Courses -->
+  <section class="card">
+    <h2>Available Training Courses</h2>
+    <ul class="course-list">
+      <li><span class="icon">🧠</span> Artificial Intelligence and Machine Learning</li>
+      <li><span class="icon">☁️</span> Cloud Computing</li>
+      <li><span class="icon">🔒</span> Cybersecurity</li>
+      <li><span class="icon">&lt;/&gt;</span> Full-Stack Web Development</li>
+      <li><span class="icon">📊</span> Data Science</li>
+    </ul>
+  </section>
+
+  <!-- Explore Infosys -->
+  <section class="card explore">
+    <h2>Explore Infosys</h2>
+    <p>Visit the official Infosys website to learn more about the company and its services.</p>
+    <div class="btn-row">
+      <a href="https://www.infosys.com" class="btn btn-blue" target="_blank" rel="noopener">🌐 Visit Infosys Website</a>
+      <a href="https://www.infosys.com/careers" class="btn btn-green" target="_blank" rel="noopener">💼 Explore Infosys Careers</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © 2026 Infosys Training Portal — HTML Practice Program
+  </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit Shop</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    display:flex;
+    flex-direction:column;
+    width:80%;
+    margin:auto;
+    height:60%;
+}
+
+/* Header */
+
+header{
+    background:url("bg.jpg");
+    background-size:cover;
+    height:160px;
+    color:white;
+    height:100%;
+}
+
+.logo{
+    width:80px;
+    margin:5px;
+    
+}
+
+header h1{
+    text-align:center;
+    color:tomato;
+    padding-bottom:1px;
+}
+
+/* Navigation */
+
+nav{
+    background:#999;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    flex:1;
+    text-align:center;
+    padding:15px;
+}
+
+nav ul li:hover{
+    background:red;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* Fruits */
+
+.section1{
+    background:pink;
+    padding:30px;
+    display:flex;
+    justify-content:center;
+}
+
+table{
+    background:green;
+    border-radius:10px;
+    overflow:hidden;
+    color:white;
+    width:20%;
+}
+
+table th{
+    background:green;
+    padding:10px;
+}
+
+table td{
+    background:greenyellow;
+    color:black;
+    padding:15px;
+    text-align:center;
+}
+
+/* Forms */
+
+.section2{
+    background:url("loginbg.jpg");
+    background-size:cover;
+    padding:50px;
+    display:flex;
+    justify-content:center;
+    gap:50px;
+}
+
+.form-box{
+    width:330px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px gray;
+}
+
+.form-box h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#0066ff;
+    color:white;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+/* Footer */
+
+footer{
+    background:#ffe0b3;
+    padding:20px;
+    font-size:20px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<header>
+
+<img src="./logof.avif" class="logo">
+
+<h1>Fruit Shop</h1>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Shop</a></li>
+
+<li><a href="#">Offers</a></li>
+
+</ul>
+
+</nav>
+
+<div class="section1">
+
+<table border="0">
+
+<tr>
+
+<th colspan="2">Favourites</th>
+
+</tr>
+
+<tr>
+
+<td>Apple</td>
+
+<td><img src="./apple.jpg" width="40"></td>
+
+</tr>
+
+<tr>
+
+<td>Orange</td>
+
+<td><img src="./orange.jpg" width="40"></td>
+
+</tr>
+
+<tr>
+
+<td>Mango</td>
+
+<td><img src="./mango.jpg" width="40"></td>
+
+</tr>
+
+<tr>
+
+<td>Grapes</td>
+
+<td><img src="./grape.jpg" width="40"></td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="section2">
+
+<!-- Login Form -->
+
+<div class="form-box">
+
+<h2>Sign In</h2>
+
+<form>
+
+<label>Username</label>
+
+<input type="text" placeholder="Enter Username">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<button>Sign In</button>
+
+</form>
+
+</div>
+
+<!-- Register Form -->
+
+<div class="form-box">
+
+<h2>Sign Up</h2>
+
+<form>
+
+<label>Name</label>
+
+<input type="text" placeholder="Enter Name">
+
+<label>Email</label>
+
+<input type="email" placeholder="Enter Email">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<button>Sign Up</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>Your Address</p>
+
+<p>© 2026-2027. (URK24CS1135) - Web Technology Lab Batch 1. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shortest and Longest Word - URK24CS1135</title>
+</head>
+
+<body>
+    <h2>Find Shortest and Longest Word - URK24CS1135</h2>
+    <button onclick="findwords()">Find</button>
+    <p id="result"></p>
+
+    <script>
+        function findwords() {
+            var str = "Web Development Tutorial";
+            var words = str.split(" ");
+            var shortest = words[0];
+            var longest = words[0];
+
+            for (var i = 0; i < words.length; i++) {
+                if (words[i].length < shortest.length) {
+                    shortest = words[i];
+                }
+                if (words[i].length > longest.length) {
+                    longest = words[i];
+                }
+            }
+            document.getElementById("result").innerHTML =
+                "Shortest: " + shortest + "<br>" +
+                "Longest: " + longest;
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+

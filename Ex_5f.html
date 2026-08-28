@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Birthday Cake Order Form - URK24CS1135</title>
+</head>
+
+<body>
+    <h2>Birthday Cake Order Form - URK24CS1135</h2>
+    Number of 1/2kg Cakes:
+    <input type="text" id="small"><br><br>
+    Number of 1kg Cakes:
+    <input type="text" id="medium"><br><br>
+    Number of 2kg Cakes:
+    <input type="text" id="large"><br><br>
+    Tip:
+    <br>
+    <input type="radio" name="tip" value="10"> 10%
+    <br>
+    <input type="radio" name="tip" value="15" checked> 15%
+    <br>
+    <input type="radio" name="tip" value="20"> 20%
+    <br><br>
+    <button id="submit">Calculate Order</button>
+    <p>
+        Cost of order: Rs. <span id="price"></span>
+    </p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", calculate);
+        function calculate() {
+
+            let small = parseInt(document.getElementById("small").value);
+            let medium = parseInt(document.getElementById("medium").value);
+            let large = parseInt(document.getElementById("large").value);
+            let tip = parseInt(
+                document.querySelector('input[name="tip"]:checked').value
+            );
+            let cost = (small * 100) +
+                       (medium * 200) +
+                       (large * 400);
+            let tax = cost * 0.09;
+            let total = cost + tax;
+            total = total + (total * tip / 100);
+
+            document.getElementById("price").innerHTML =
+                total.toFixed(2);
+        }
+    </script>
+
+</body>
+
+</html>
+

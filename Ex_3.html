@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ms. Mariah Caraiban - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+
+    <style>
+        /* Base Styling Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ba00ba;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.header-center h1 {
+    color: #e0f7fa;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.social-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #008080;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #80deea;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    border-bottom: 2px solid #00acc1;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #004d40;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-item:hover {
+    color: #000;
+}
+
+/* About Section */
+.about-section {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #008080;
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-box {
+    flex: 1;
+    background-color: transparent;
+    border: 3px dashed white;
+    padding: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.about-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.silhouette-group {
+    display: flex;
+    gap: 10px;
+}
+
+.silhouette {
+    width: 40px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 20px 0 0;
+}
+
+/* Skills Section */
+.skills-section {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #d1c4e9;
+    padding: 20px;
+    gap: 15px;
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.skill-card h3 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.html5 { background-color: #3f51b5; }
+.css3 { background-color: #00bcd4; }
+.javascript { background-color: #00695c; }
+.php { background-color: #4a148c; }
+
+.skill-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Family Section */
+.family-section {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #006064;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.family-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.circle-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 15px;
+}
+
+.family-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #4db6ac;
+    object-fit: cover;
+}
+
+/* Visual States matching mockup (Grayscale vs Active Color) */
+.grayscale {
+    filter: opacity(0.6) sepia(1) hue-rotate(100deg) saturate(2);
+}
+
+.family-card.active .family-img {
+    border-color: white;
+}
+
+.hover-tooltip {
+    position: absolute;
+    bottom: -15px;
+    background-color: white;
+    color: #333;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px dashed green;
+    white-space: nowrap;
+}
+
+.family-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.family-card.active h3 {
+    color: #ccff00;
+}
+
+.family-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 250px;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    max-width: 1000px;
+    background-color: #ffe082;
+    padding: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-top: 1px solid #ffd54f;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-left">
+            <img src="./Logo.png" alt="Ms. Mariah Caraiban Profile" class="profile-img">
+        </div>
+        <div class="header-center">
+            <h1>Ms. Mariah Caraiban</h1>
+        </div>
+        <div class="header-right">
+            <div class="social-icons">
+                <a href="#" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>=
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <a href="#" class="nav-item">Personal</a>
+        <a href="#" class="nav-item">Academic</a>
+        <a href="#" class="nav-item">Activity</a>
+        <a href="#" class="nav-item">Others</a>
+    </nav>
+
+    <!-- Content / About Section -->
+    <section class="about-section">
+        <div class="about-box">
+            <p>Family is our greatest blessing, providing unconditional love, safety, and support.</p>
+        </div>
+        <div class="about-graphic">
+            <div class="silhouette-group">
+                <div class="silhouette"></div>
+                <div class="silhouette"></div>
+                <div class="silhouette"></div>
+                <div class="silhouette"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="skill-card html5">
+            <div class="skill-logo">HTML5</div>
+            <h3>HTML5</h3>
+        </div>
+        <div class="skill-card css3">
+            <div class="skill-logo">CSS3</div>
+            <h3>CSS3</h3>
+        </div>
+        <div class="skill-card javascript">
+            <div class="skill-logo">JS</div>
+            <h3>Javascript</h3>
+        </div>
+        <div class="skill-card php">
+            <div class="skill-logo">php</div>
+            <h3>PHP</h3>
+        </div>
+    </section>
+
+    <!-- Family / Hover Interactive Section -->
+    <section class="family-section">
+        <!-- Father Card -->
+
+        <div class="family-card">
+            <div class="circle-container">
+                <img src="./passport img.png" alt="Father Profile" class="family-img grayscale">
+            </div>
+            <h3>MR. FATHER'S NAME</h3>
+            <p>"It was my father who taught me to value myself. He told me that I was uncommonly beautiful and that I was the most precious thing in his life."</p>
+        </div>
+
+        <!-- Mother Card (Hover Active State) -->
+        <div class="family-card active">
+            <div class="circle-container">
+                <img src="./Logo.png" alt="Mother Profile" class="family-img color">
+                <div class="hover-tooltip">on mouse over, show the image</div>
+            </div>
+            <h3>MRS. MOTHER'S NAME</h3>
+            <p>"My mother taught me that we all have the power to achieve our dreams."</p>
+        </div>
+
+        <!-- Sibling Card -->
+        <div class="family-card">
+            <div class="circle-container">
+                <img src="./sibling.jpg" alt="Sibling Profile" class="family-img grayscale">
+            </div>
+            <h3>SIS / BRO NAME</h3>
+            <p>"A sister is both your mirror - and your opposite."</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Your address</p>
+        <p>&copy; 2020-2021. (Register number) - Web Technology Lab Batch 1. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

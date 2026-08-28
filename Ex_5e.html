@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heads or Tails - URK24CS1135</title>
+</head>
+
+<body>
+
+    <h2>Heads or Tails - URK24CS1135</h2>
+    <img src="coins.png" id="coin" width="150"><br><br>
+    <button id="flip">Flip!</button>
+    <p>
+        Heads Total: <span id="num_heads">0</span><br>
+        Tails Total: <span id="num_tails">0</span>
+    </p>
+
+    <script>
+        let heads = 0;
+        let tails = 0;
+
+        document.getElementById("flip").addEventListener("click", flipFunction);
+        function flipFunction() {
+
+            let random = Math.floor(Math.random() * 2);
+            if (random === 0) {
+
+                document.getElementById("coin").src = "Heads.png";
+                heads++;
+            }
+            else {
+                document.getElementById("coin").src = "Tails.png";
+                tails++;
+            }
+
+            document.getElementById("num_heads").innerHTML = heads;
+            document.getElementById("num_tails").innerHTML = tails;
+        }
+    </script>
+
+</body>
+
+</html>
+
