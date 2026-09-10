@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Details - URK24CS1154</title>
+</head>
+
+<body>
+
+    <h1>Student Details</h1>
+
+    <div id="result"></div>
+
+    <script>
+
+        // Create an array of student objects
+
+        var students = [
+
+            {
+                name: "John",
+                r_num: "UR13CS129",
+                dob: 1995
+            },
+
+            {
+                name: "Joseph",
+                r_num: "UR13CS130",
+                dob: 1998
+            },
+
+            {
+                name: "David",
+                r_num: "UR13CS131",
+                dob: 2001
+            },
+
+            {
+                name: "James",
+                r_num: "UR13CS132",
+                dob: 2003
+            }
+
+        ];
+
+
+        var output = "";
+
+
+        // Iterate through the array
+
+        for (var i = 0; i < students.length; i++) {
+
+            output +=
+                students[i].name +
+                "'s Register Number is " +
+                students[i].r_num +
+                "<br>";
+
+            // Categorize based on year of birth
+
+            if (students[i].dob < 2000) {
+
+                output +=
+                    "Born before 2000<br>";
+
+            }
+
+            else {
+
+                output +=
+                    "Born after 2000<br>";
+
+            }
+
+            output += "<br>";
+        }
+
+
+        // Display result
+
+        document.getElementById("result").innerHTML = output;
+
+    </script>
+
+</body>
+
+</html>

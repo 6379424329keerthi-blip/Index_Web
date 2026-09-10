@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Font Size - URK24CS1154</title>
+</head>
+
+<body>
+
+    <h1>Change Font Size</h1>
+
+    <p id="para1"
+    onmouseover="incSize()"
+    onmouseout="decSize()">
+
+        Move cursor over me to zoom in...
+
+    </p>
+
+    <script>
+
+        function incSize() {
+
+            document.getElementById("para1").style.fontSize = "28px";
+
+        }
+
+        function decSize() {
+
+            document.getElementById("para1").style.fontSize = "16px";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

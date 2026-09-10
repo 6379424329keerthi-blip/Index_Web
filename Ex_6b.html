@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic Background - URK24CS1154</title>
+</head>
+
+<body>
+
+    <h1>Dynamic Background!</h1>
+
+    <script>
+
+        function setBackgroundColor() {
+
+            // Create random RGB values
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+
+            // Create RGB color
+            var color = "rgb(" + red + "," + green + "," + blue + ")";
+
+            // Change body background color
+            document.getElementsByTagName("body")[0].style.backgroundColor = color;
+        }
+
+        // Change background every 30 seconds
+        setInterval(setBackgroundColor, 30000);
+
+        // Set initial background
+        setBackgroundColor();
+
+    </script>
+
+</body>
+
+</html>
