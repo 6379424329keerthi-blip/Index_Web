@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Cake Shop</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .shop {
+            width: 600px;
+            margin: auto;
+        }
+
+        h2 {
+            background-color: #d00000;
+            color: white;
+            padding: 8px;
+        }
+
+        .cakes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .cake {
+            width: 120px;
+        }
+
+        .cake img {
+            width: 120px;
+            height: 110px;
+            object-fit: cover;
+        }
+
+        .cake p {
+            font-size: 12px;
+        }
+
+        h3 {
+            color: #1769e0;
+        }
+
+        .order {
+            width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            color: blue;
+            font-weight: bold;
+        }
+
+        input {
+            width: 280px;
+            padding: 7px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 150px;
+            padding: 8px;
+            background-color: #1688ff;
+            color: white;
+            border: none;
+            display: block;
+            margin: auto;
+        }
+
+        hr {
+            border: 1px solid blue;
+        }
+
+        #total {
+            color: #d00000;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="shop">
+
+        <h2>CAKE SHOP</h2>
+
+        <div class="cakes">
+
+            <div class="cake">
+                <img src="color.png">
+                <p>Color Cake - Rs. 300</p>
+            </div>
+
+            <div class="cake">
+                <img src="brown.png">
+                <p>Brown Cake - Rs. 200</p>
+            </div>
+
+            <div class="cake">
+                <img src="milky.png">
+                <p>Milky Cake - Rs. 250</p>
+            </div>
+
+            <div class="cake">
+                <img src="blackforest.png">
+                <p>Black Forest Cake - Rs. 350</p>
+            </div>
+
+        </div>
+
+        <h4>URK24CS1135</h4>
+        <h3>Order Cake</h3>
+
+        <div class="order">
+
+            <label>Color Cake(Quantity)</label>
+            <input type="text" id="color" value="0">
+
+            <label>Brown Cake(Quantity)</label>
+            <input type="text" id="brown" value="0">
+
+            <label>Milky Cake(Quantity)</label>
+            <input type="text" id="milky" value="0">
+
+            <label>Black Forest Cake(Quantity)</label>
+            <input type="text" id="blackforest" value="0">
+
+            <button id="placeOrder">Place Order</button>
+
+        </div>
+
+        <hr>
+
+        <h3 style="color:green;">Purchase Order Bill!!!</h3>
+
+        <h3>
+            Total Price
+            <span id="total">Rs.0</span>
+        </h3>
+
+    </div>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("#placeOrder").click(function() {
+
+                var color =
+                    parseInt($("#color").val()) || 0;
+
+                var brown =
+                    parseInt($("#brown").val()) || 0;
+
+                var milky =
+                    parseInt($("#milky").val()) || 0;
+
+                var blackforest =
+                    parseInt($("#blackforest").val()) || 0;
+
+                var total =
+                    (color * 300) +
+                    (brown * 200) +
+                    (milky * 250) +
+                    (blackforest * 350);
+
+                $("#total").text("Rs." + total);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

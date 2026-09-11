@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Car Workshop</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1688ff;
+        }
+
+        .car {
+            width: 300px;
+            height: 150px;
+            margin: 30px auto;
+            position: relative;
+        }
+
+        .body {
+            width: 220px;
+            height: 60px;
+            background-color: limegreen;
+            position: absolute;
+            left: 40px;
+            top: 50px;
+        }
+
+        .top {
+            width: 100px;
+            height: 45px;
+            background-color: green;
+            position: absolute;
+            left: 100px;
+            top: 10px;
+            clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+        }
+
+        .glass {
+            width: 60px;
+            height: 25px;
+            background-color: lightblue;
+            position: absolute;
+            left: 120px;
+            top: 17px;
+            clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+        }
+
+        .wheel {
+            width: 45px;
+            height: 45px;
+            background-color: #14245c;
+            border-radius: 50%;
+            position: absolute;
+            top: 100px;
+        }
+
+        #wheel1 {
+            left: 65px;
+        }
+
+        #wheel2 {
+            right: 65px;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 10px;
+            background-color: white;
+            border: 1px solid #1688ff;
+            color: #1688ff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1688ff;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>3. Car Workshop</h2>
+
+    <h4>URK24CS1135</h4>
+
+    <div class="car">
+
+        <div class="top"></div>
+
+        <div class="glass"></div>
+
+        <div class="body"></div>
+
+        <div class="wheel" id="wheel1"></div>
+
+        <div class="wheel" id="wheel2"></div>
+
+    </div>
+
+    <div class="controls">
+
+        <button id="changeColor">
+            Change Car Color
+        </button>
+
+        <button id="changeGlass">
+            Change Glass Color
+        </button>
+
+        <button id="increaseTyre">
+            Tyre Size Increase
+        </button>
+
+        <button id="decreaseTyre">
+            Tyre Size Decrease
+        </button>
+
+        <button id="reset">
+            Reset
+        </button>
+
+    </div>
+
+
+    <script>
+
+        $(document).ready(function() {
+
+            // Change car body color
+
+            $("#changeColor").click(function() {
+
+                $(".body").css("background-color", "red");
+
+            });
+
+
+            // Change glass color
+
+            $("#changeGlass").click(function() {
+
+                $(".glass").css("background-color", "black");
+
+            });
+
+
+            // Increase tyre size
+
+            $("#increaseTyre").click(function() {
+
+                $(".wheel").css({
+                    "width": "60px",
+                    "height": "60px"
+                });
+
+            });
+
+
+            // Decrease tyre size
+
+            $("#decreaseTyre").click(function() {
+
+                $(".wheel").css({
+                    "width": "30px",
+                    "height": "30px"
+                });
+
+            });
+
+
+            // Reset car
+
+            $("#reset").click(function() {
+
+                $(".body").css(
+                    "background-color",
+                    "limegreen"
+                );
+
+                $(".glass").css(
+                    "background-color",
+                    "lightblue"
+                );
+
+                $(".wheel").css({
+                    "width": "45px",
+                    "height": "45px"
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
