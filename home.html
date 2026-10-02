@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>User Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        label {
+            display: inline-block;
+            width: 130px;
+            margin-bottom: 15px;
+        }
+
+        input,
+        select {
+            padding: 7px;
+            width: 220px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<script>
+document.getElementById("studentForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+
+    const data = {
+        name: formData.get("name"),
+        password: formData.get("password"),
+        age: formData.get("age"),
+        mobile: formData.get("mobile"),
+        email: formData.get("email"),
+        gender: formData.get("gender"),
+        state: formData.get("state"),
+        skills: formData.getAll("skills")
+    };
+
+    try {
+        const response = await fetch("http://localhost:5000/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        alert(result.message);
+
+        if (response.ok) {
+            this.reset();
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Unable to connect to server");
+    }
+});
+</script>
+
+<body>
+
+<div class="container">
+
+    <h1>User Registration Form</h1>
+
+    <form id="studentForm">
+
+        <label>Name:</label>
+        <input type="text"
+            name="name"
+            required>
+        <br>
+
+        <label>Password:</label>
+        <input type="password"
+            name="password"
+            required>
+        <br>
+
+        <label>Age:</label>
+        <input type="number"
+            name="age"
+            required>
+        <br>
+
+        <label>Mobile Number:</label>
+        <input type="tel"
+            name="mobile"
+            pattern="[0-9]{10}"
+            required>
+        <br>
+
+        <label>Email:</label>
+        <input type="email"
+            name="email"
+            required>
+        <br>
+
+        <label>Gender:</label>
+
+        <input type="radio"
+            name="gender"
+            value="Male"
+            required>
+        Male
+
+        <input type="radio"
+            name="gender"
+            value="Female">
+        Female
+
+        <br><br>
+
+        <label>State:</label>
+
+        <select name="state" required>
+            <option value="">Select State</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+        </select>
+
+        <br><br>
+
+        <label>Skills:</label>
+
+        <input type="checkbox"
+            name="skills"
+            value="JavaScript">
+        JavaScript
+
+        <input type="checkbox"
+            name="skills"
+            value="Python">
+        Python
+
+        <input type="checkbox"
+            name="skills"
+            value="C++">
+        C++
+
+        <input type="checkbox"
+            name="skills"
+            value="Java">
+        Java
+
+        <br><br>
+
+        <center>
+            <button type="submit">
+                Submit
+            </button>
+        </center>
+
+    </form>
+
+</div>
+
+</body>
+</html>
